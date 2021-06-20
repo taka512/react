@@ -1,0 +1,16 @@
+version: "3"
+services:
+  node:
+    container_name: node.local
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - ./:/home/node/app
+    working_dir: /home/node/app
+    ports:
+      - 3000:3000
+    command: sh -c "cd sample && yarn start"
+    tty: true
