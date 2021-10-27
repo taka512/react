@@ -15,4 +15,8 @@ docker/stop: ## stop containers
 docker/ssh: ## connect in container
 	docker exec -it -e COLUMNS=$(shell tput cols) -e LINES=$(shell tput lines) $(CONTAINER) ash
 docker/run/sample: ## run sample application
-	docker-compose run --rm node sh -c "cd sample; yarn start"
+	docker exec -it $(CONTAINER) ash -c "cd sample && yarn start" 
+docker/run/sample/install: ## install sample application
+	docker exec -it $(CONTAINER) ash -c "cd sample && yarn install" 
+docker/run/react-tutorial: ## run react-tutorial application
+	docker exec -it $(CONTAINER) ash -c "cd react-tutorial && yarn start" 

@@ -6,7 +6,7 @@ react test application
 
 - start
   - make docker/up
-- access
+- http serv
   - http://localhost:3000
 - stop
   - make docker/stop

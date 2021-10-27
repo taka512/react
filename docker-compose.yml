@@ -12,5 +12,5 @@ services:
     working_dir: /home/node/app
     ports:
       - 3000:3000
-    command: sh -c "cd sample && yarn start"
+#    command: sh -c "cd sample && yarn start"
     tty: true
