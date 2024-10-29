@@ -1,4 +1,4 @@
-FROM node:16-alpine
+FROM node:23-slim
 
-RUN apk update && \
-    apk add git
+RUN apt-get update && apt-get install -y \
+  vim

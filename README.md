@@ -13,6 +13,7 @@ react test application
 - help
   - make help
 
-# doc
+# dir
 
-- https://github.com/nodejs/docker-node
+create-react-app/
+  see https://create-react-app.dev/
